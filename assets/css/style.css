@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -8,10 +9,10 @@
 body {
     font-family: Lato, sans-serif;
     font-weight: 300;
-    color: #3a3a3a
+    color: #3a3a3a;
 }
 
-/*headings and logo */
+/* headings and logo */
 
 h1, h2 {
     font-family: Oswald, sans-serif;
@@ -19,11 +20,15 @@ h1, h2 {
     letter-spacing: 4px;
     color: #252525;
 }
+
 #logo {
     float: left;
     font-size: 280%;
     margin-left: 30px;
 }
+
+/* navigation links */
+
 #menu {
     font-size: 110%;
     letter-spacing: 4px;
@@ -32,22 +37,28 @@ h1, h2 {
 #menu, #logo {
     line-height: 75px;
 }
-#menu li{
-float: right;
-list-style-type: none;
-margin-right: 30px;
+
+#menu li {
+    float: right;
+    list-style-type: none;
+    margin-right: 30px;
 }
-#menu a { 
+
+#menu a {
     text-decoration: none;
     color: inherit;
 }
+
 #menu a:hover {
     border-bottom: 1px solid #3a3a3a;
 }
+
 .active {
     border-bottom: 1px solid #3a3a3a;
 }
-/* hero image and cover text*/
+
+/* hero image and cover text */
+
 #hero-outer {
     height: 600px;
     width: 100%;
@@ -59,19 +70,22 @@ margin-right: 30px;
 #cover-text, #cover-text h2 {
     color: #fff;
 }
+
 #hero-image {
     height: 600px;
     width: 100%;
-    background: url("../images/hero-image.webp") no-repeat center center;
-/*animates zoom effect on loading page*/
-animation-name: hero-zoom;
-animation-duration: 5s;
-animation-fill-mode: forwards;
+    background: url('../images/hero-image.webp') no-repeat center center;
+
+    /* animates zoom effect on loading page */
+    animation-name: hero-zoom;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
 }
-/* creates the level of zoom for hero image*/
+
+/* creates the level of zoom for hero image */
 @keyframes hero-zoom {
     from{
-transform: scale(1);
+        transform: scale(1);
     }
     to{
         transform: scale(1.1);
@@ -97,25 +111,34 @@ transform: scale(1);
 
     position: absolute;
 }
+
 /* club ethos */
 
 #club-ethos {
     height: 600px;
 }
+
 #left-about {
     padding-top: 30px;
     width: 33%;
     float: left;
 }
+
 #right-about {
     padding-top: 30px;
     width: 33%;
     float: right;
 }
+
 #center-about {
-    padding-top: 30px;
     width: 33%;
     margin: 0 auto;
+}
+
+hr {
+    border-top: 1px solid #3a3a3a;
+    width: 100%;
+    margin: 5px 0;
 }
 
 .left-about-heading {
@@ -125,6 +148,7 @@ transform: scale(1);
     clear: both;
     margin-bottom: 50px;
 }
+
 .right-about-heading {
     width: 60%;
     float: left;
@@ -132,41 +156,42 @@ transform: scale(1);
     clear: both;
     margin-bottom: 50px;
 }
-hr {
-    border-top: 1px solid #3a3a3a;
-    width: 100%;
-    margin: 5px 0;
-}
-.right-about-heading h2{
+
+.right-about-heading h2 {
     text-align: right;
 }
+
 .right-about-heading p {
     text-align: right;
 }
+
 #welcome {
     text-align: center;
     margin: 20px 0;
     font-size: 280%;
 }
+
 #circle-container {
     width: 300px;
     height: 300px;
     padding: 30px;
-    border: solid;
+    border-style: solid;
     border-color: #ccc;
     border-width: 1px;
     border-radius: 50%;
     margin: 0 auto;
 }
+
 #circle-cover-bg {
-    background: url(../images/ethos-center-image.jpg) no-repeat center center;
+    background: url('../images/ethos-center-image.jpg') no-repeat center center;
     height: 100%;
     border-radius: 50%;
 }
 
-/*event times*/
+/* event times */
+
 #times {
-    background-image: url("../images/dublin-city.webp");
+    background-image: url('../images/times-background.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -182,34 +207,113 @@ hr {
     float: left;
     padding: 30px 0 0 10px;
     text-align: center;
-    border: 2px solid #fff;
+    border: 2px solid white;
     box-sizing: border-box;
 }
+
 #times h2 {
     color: #fafafa;
 }
+
+/* footer */
+
 footer {
     height: 150px;
 }
-.social-networks{
+
+.social-networks {
     text-align: center;
 }
 
-.social-networks li{
+.social-networks > li {
     display: inline;
 }
-.social-networks i{
+
+.social-networks i {
     font-size: 160%;
     margin: 1%;
     padding: 5%;
     color: #3a3a3a;
 }
+
+/* gallery */
+
 #photos {
     clear: both;
     line-height: 0;
     column-count: 4;
     column-gap: 0;
 }
+
 #photos > img {
     width: 100%;
+}
+
+/* Media queries */
+
+/* For larger to medium screens size from 1200px wide and down */
+@media screen and (max-width: 1200px) {
+    #club-ethos {
+        width: 65%;
+        height: 1200px;
+        margin: 0 auto;
+    }
+
+    #welcome {
+        padding: 30px 0;
+        margin: 0;
+    }
+
+    #left-about, #right-about {
+        width: 100%;
+        float: left;
+        padding: 0;
+    }
+
+    #center-about {
+        clear: both;
+        width: 100%;
+        float: left;
+        padding: 0;
+    }
+
+    hr {
+        display: none;
+    }
+}
+
+/* For medium screen sizes from 950px wide and down */
+@media screen and (max-width: 950px) {
+
+    #menu {
+        clear: left;
+        float: left;
+        margin-left: 30px;
+        margin-bottom: 20px;
+        line-height: 25px;
+    }
+
+    #cover-text {
+        left: 0;
+    }
+
+    #club-ethos {
+        width: 90%;
+        height: 1200px;
+        margin: 0 auto;
+    }
+
+    .left-about-heading, .right-about-heading {
+        width: inherit;
+    }
+
+    .left-about-heading h2, .right-about-heading h2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .left-about-heading p, .right-about-heading p {
+        text-align: center;
+        padding: 0 20px;
+    }
 }
