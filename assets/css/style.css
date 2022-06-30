@@ -191,7 +191,7 @@ hr {
 /* event times */
 
 #times {
-    background-image: url('../images/times-background.webp');
+    background-image:url(../images/dublin-city.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -274,6 +274,13 @@ footer {
         clear: both;
         width: 100%;
         float: left;
+        padding: 0;
+    }
+
+    #times > div {
+        width: 100%;
+        clear: both;
+        height: 150px;
         padding: 0;
     }
 
